@@ -25,6 +25,7 @@
         <module>springcloudeureka</module>
         <module>springcloudconfigclient</module>
         <module>springcloudconfigserver</module>
+        <module>springcloudhelloservice</module>
     </modules>
 
     <properties>

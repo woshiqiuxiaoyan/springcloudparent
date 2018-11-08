@@ -4,14 +4,12 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloudeureka/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloudconfigserver/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloudconfigclient/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloudprovide/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloudhelloservice/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloudribbon/pom.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
+    <output url="file://$PROJECT_DIR$/classes" />
   </component>
 </project>

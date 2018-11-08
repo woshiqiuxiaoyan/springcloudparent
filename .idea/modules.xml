@@ -5,8 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/springcloudconfigclient/springcloudconfigclient.iml" filepath="$PROJECT_DIR$/springcloudconfigclient/springcloudconfigclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloudconfigserver/springcloudconfigserver.iml" filepath="$PROJECT_DIR$/springcloudconfigserver/springcloudconfigserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloudeureka/springcloudeureka.iml" filepath="$PROJECT_DIR$/springcloudeureka/springcloudeureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloudhelloservice/springcloudhelloservice.iml" filepath="$PROJECT_DIR$/springcloudhelloservice/springcloudhelloservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloudparent.iml" filepath="$PROJECT_DIR$/springcloudparent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springcloudprovide/springcloudprovide.iml" filepath="$PROJECT_DIR$/springcloudprovide/springcloudprovide.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloudribbon/springcloudribbon.iml" filepath="$PROJECT_DIR$/springcloudribbon/springcloudribbon.iml" />
     </modules>
   </component>
 </project>
