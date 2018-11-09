@@ -23,7 +23,27 @@ public class ComsumerController {
 
     @RequestMapping ("comsumer")
     public String helloComsumer() {
-        return restTemplate.getForEntity("http://hello-service/hello",String.class).getBody();
+        return restTemplate.getForEntity("http://hello-service/comsumer",String.class).getBody();
     }
+
+
+    @RequestMapping ("hello")
+    public String helloYan() {
+        for(int i=10;i>0;i--){
+            restTemplate.getForEntity("http://hello-service/hello?name={1}",String.class,"丘小燕").getBody();
+        }
+        return "try it";
+    }
+
+
+
+
+    @RequestMapping ("getUserEntity")
+    public String getUserEntity() {
+        com.yan.common.entity.UserInfo userInfo=new com.yan.common.entity.UserInfo();
+        ResponseEntity<UserInfo> repository = restTemplate.getForEntity("http://hello-service/getUserInfo",UserInfo.class).getBody();
+        return "good job!";
+    }
+
 
 }
