@@ -20,8 +20,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.yan</groupId>
-			<artifactId>common</artifactId>
-			<version>${project.version}</version>
+			<artifactId>springcloudcommon</artifactId>
+			<version>1.0-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>

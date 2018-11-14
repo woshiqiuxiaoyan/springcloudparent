@@ -1,6 +1,10 @@
 package com.yan.springcloudribbon.controller;
 
+import com.yan.common.entity.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -20,30 +24,45 @@ public class ComsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
+    private String urlPreix="http://hello-service";
+
 
     @RequestMapping ("comsumer")
     public String helloComsumer() {
-        return restTemplate.getForEntity("http://hello-service/comsumer",String.class).getBody();
+        return restTemplate.getForEntity(urlPreix+"/comsumer",String.class).getBody();
     }
 
 
     @RequestMapping ("hello")
     public String helloYan() {
-        for(int i=10;i>0;i--){
-            restTemplate.getForEntity("http://hello-service/hello?name={1}",String.class,"丘小燕").getBody();
+        for (int i = 10; i > 0; i--) {
+            restTemplate.getForEntity(urlPreix+"/hello?name={1}",String.class,"丘小燕").getBody();
         }
         return "try it";
     }
 
 
-
-
     @RequestMapping ("getUserEntity")
     public String getUserEntity() {
-        com.yan.common.entity.UserInfo userInfo=new com.yan.common.entity.UserInfo();
-        ResponseEntity<UserInfo> repository = restTemplate.getForEntity("http://hello-service/getUserInfo",UserInfo.class).getBody();
-        return "good job!";
+        ResponseEntity<UserInfo> repository = restTemplate.getForEntity("http://hello-service/getUserInfo",UserInfo.class);
+        return "good job!" + repository.getBody();
     }
 
+    @RequestMapping("saveUserInfo")
+    public String saveUserInfo(){
+        UserInfo userInfo=new UserInfo();
+        userInfo.setAge(11);
+        userInfo.setGoodAt("什么都会");
+        userInfo.setName("丘小燕");
+
+        HttpHeaders httpHeaders=new HttpHeaders();
+        httpHeaders.add("yandaye","我是燕大爷");
+
+        System.err.print("我是中文===");
+        HttpEntity<UserInfo> httpEntity=new HttpEntity<>(userInfo,httpHeaders);
+        String result = restTemplate.postForEntity(urlPreix+"/saveUserInfo?name={1}",httpEntity,String.class,"燕大爷").getBody();
+        return result;
+
+    }
 
 }

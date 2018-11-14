@@ -25,7 +25,7 @@
         <module>springcloudconfigclient</module>
         <module>springcloudconfigserver</module>
         <module>springcloudhelloservice</module>
-        <module>common</module>
+        <module>springcloudcommon</module>
     </modules>
 
     <properties>
