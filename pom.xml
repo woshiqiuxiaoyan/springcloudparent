@@ -26,6 +26,8 @@
         <module>springcloudconfigserver</module>
         <module>springcloudhelloservice</module>
         <module>springcloudcommon</module>
+        <module>springcloudfegin</module>
+        <module>springcloudapi</module>
     </modules>
 
     <properties>

@@ -1,6 +1,8 @@
 package com.yan.springcloudribbon.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.yan.common.entity.UserInfo;
+import com.yan.springcloudribbon.service.IComsumerServicce;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -23,14 +25,21 @@ public class ComsumerController {
 
     @Autowired
     private RestTemplate restTemplate;
+    @Autowired
+    private IComsumerServicce comsumerServicce;
 
     private String urlPreix="http://hello-service";
 
 
+
     @RequestMapping ("comsumer")
     public String helloComsumer() {
-        return restTemplate.getForEntity(urlPreix+"/comsumer",String.class).getBody();
+        return comsumerServicce.helloComsumerService();
     }
+
+
+
+
 
 
     @RequestMapping ("hello")

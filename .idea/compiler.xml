@@ -6,20 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springcloudapi" />
         <module name="springcloudcommon" />
         <module name="springcloudconfigclient" />
         <module name="springcloudconfigserver" />
         <module name="springcloudeureka" />
+        <module name="springcloudfegin" />
         <module name="springcloudhelloservice" />
         <module name="springcloudribbon" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common" target="1.8" />
+      <module name="springcloudapi" target="1.8" />
       <module name="springcloudcommon" target="1.5" />
       <module name="springcloudconfigclient" target="1.8" />
       <module name="springcloudconfigserver" target="1.8" />
       <module name="springcloudeureka" target="1.8" />
+      <module name="springcloudfegin" target="1.8" />
       <module name="springcloudhelloservice" target="1.8" />
       <module name="springcloudparent" target="1.8" />
       <module name="springcloudribbon" target="1.8" />

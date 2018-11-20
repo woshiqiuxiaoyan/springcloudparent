@@ -1,12 +1,11 @@
 package com.yan.springcloudhelloservice.contorller;
 
-import com.netflix.ribbon.proxy.annotation.Http;
 import com.yan.common.entity.UserInfo;
+import com.yan.springcloudapi.service.ITestService;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 创建时间: 16:39
  */
 @RestController
-public class TestController {
+public class TestController implements ITestService {
 
     @Autowired
     private DiscoveryClient discoveryClient;
@@ -65,5 +64,7 @@ public class TestController {
         this.userInfo=userInfo;
         return "保存成功";
     }
+
+
 
 }
