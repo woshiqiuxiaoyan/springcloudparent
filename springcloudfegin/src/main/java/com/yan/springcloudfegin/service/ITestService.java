@@ -1,9 +1,11 @@
 package com.yan.springcloudfegin.service;
 
 import com.yan.common.entity.UserInfo;
+import com.yan.springcloudfegin.service.impl.TestServiceImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
@@ -15,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestParam;
  * 创建时间: 下午10:38
  */
 //入参和出参是否必须一致
-@FeignClient ("hello-service")
+@FeignClient (value = "hello-service",fallback = TestServiceImpl.class)
 public interface ITestService {
-    @RequestMapping ("/comsumer")
+    @RequestMapping (value="/comsumer",method = RequestMethod.GET)
     String comsumer();
 
 

@@ -5,6 +5,7 @@ import com.yan.springcloudfegin.service.ITestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * <p>类名:FeginController </p>
@@ -20,8 +21,18 @@ public class FeginController {
     @Autowired
     private ITestService testService;
 
+    @Autowired
+    private RestTemplate restTemplate;
 
-    @RequestMapping ("/comsumer")
+    private String urlPreix="http://hello-service";
+
+    @RequestMapping ("/comsumer1")
+    String comsumer1() {
+        return restTemplate.getForObject(urlPreix+"/comsumer",String.class);
+    }
+
+
+        @RequestMapping ("/comsumer")
     String comsumer() {
         return testService.comsumer();
     }

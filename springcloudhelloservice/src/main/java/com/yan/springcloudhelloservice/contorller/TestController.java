@@ -26,6 +26,7 @@ public class TestController implements ITestService {
     private DiscoveryClient discoveryClient;
 
     @RequestMapping("/comsumer")
+    @Override
     public String  comsumer(){
         List<String> serviceIds =  discoveryClient.getServices();
         serviceIds. forEach((e)->{
@@ -38,12 +39,14 @@ public class TestController implements ITestService {
 
 
     @RequestMapping("/hello")
+    @Override
     public String  hello(@RequestParam String name){
         System.err.println("hello:"+name);
         return "hello:"+name;
     }
 
     @RequestMapping("/getUserInfo")
+    @Override
     public UserInfo  getUserInfo(){
       /*  UserInfo userInfo=new UserInfo();
         userInfo.setAge(123);
