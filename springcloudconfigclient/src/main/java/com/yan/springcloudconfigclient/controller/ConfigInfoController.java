@@ -41,8 +41,10 @@ public class ConfigInfoController {
 
     @RequestMapping("/from")
     public String getFrom(){
-        System.err.println( environment.getProperty("env"));
-        return "hello yan";
+        System.err.println( environment.getProperty("name"));
+        System.out.println("中文");
+        System.out.println(environment.getProperty("yandaye"));
+        return "hello :"+environment.getProperty("env");
     }
 
 
