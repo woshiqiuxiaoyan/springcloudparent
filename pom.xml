@@ -28,6 +28,8 @@
         <module>springcloudcommon</module>
         <module>springcloudfegin</module>
         <module>springcloudapi</module>
+        <module>springcloudribbon</module>
+        <module>springcloudzuul</module>
     </modules>
 
     <properties>
