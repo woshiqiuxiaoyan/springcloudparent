@@ -22,7 +22,7 @@ public class ConfigInfoController {
     /**
      * 第一种取值方式
      */
-   /* @Value(value="${env}")
+    @Value(value="${env}")
     private String env;
 
 
@@ -30,13 +30,13 @@ public class ConfigInfoController {
     public String getEnv(){
         System.err.println("环境变量值："+env);
         return env;
-    }*/
+    }
 
 
     /**
      * 第二种取值方式
      */
-    @Autowired
+  /*  @Autowired
     private Environment environment;
 
     @RequestMapping("/from")
@@ -45,7 +45,7 @@ public class ConfigInfoController {
         System.out.println("中文");
         System.out.println(environment.getProperty("yandaye"));
         return "hello :"+environment.getProperty("env");
-    }
+    }*/
 
 
 }

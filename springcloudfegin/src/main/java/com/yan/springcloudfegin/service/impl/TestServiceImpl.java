@@ -2,6 +2,8 @@ package com.yan.springcloudfegin.service.impl;
 
 import com.yan.common.entity.UserInfo;
 import com.yan.springcloudfegin.service.ITestService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 /**
@@ -16,6 +18,8 @@ import org.springframework.stereotype.Component;
 public class TestServiceImpl implements ITestService {
 
     private String hyStrixErrorInfo="我是断路器，你挂了";
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override
     public String comsumer() {
