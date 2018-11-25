@@ -12,11 +12,4 @@ public class SpringcloudgatewayApplication {
 		SpringApplication.run(SpringcloudgatewayApplication.class, args);
 	}
 
-
-	public RouteLocator myRoutes(RouteLocatorBuilder builder){
-
-//		builder.routes().route((p)->{return p;}).
-
-		return null;
-	}
 }
