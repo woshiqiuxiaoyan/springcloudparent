@@ -25,6 +25,8 @@ spring:
 #          - path:/fegin/**
 
 eureka:
+  instance:
+    hostname:localhost
   client:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:1112/eureka/,http://${eureka.instance.hostname}:1111/eureka/
