@@ -1,0 +1,20 @@
+server.port=1117
+
+spring:
+  redis:
+    host: 118.25.54.103
+    password: dfth@2018
+    port: 6379
+    pool:
+      max-idle: 100
+      min-idle: 1
+      max-active: 1000
+      max-wait: -1
+    timeout: 10000
+
+
+
+    #cluster:
+     # nodes:
+      #max-redirects:
+
