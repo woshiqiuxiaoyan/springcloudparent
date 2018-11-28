@@ -1,9 +1,9 @@
 package com.yan.springcloudprovide.mapper;
 
 import com.yan.springcloudprovide.entity.User;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
-@Repository
 public interface UserMapper {
-    User Sel(int id);
+    User query(@Param("id") String id);
 }

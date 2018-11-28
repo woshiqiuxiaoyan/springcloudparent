@@ -1,6 +1,7 @@
 package com.yan.springcloudprovide.contorller;
 
 import com.yan.springcloudprovide.service.UserService;
+import javax.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,9 +20,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("getUser/{id}")
-    public String GetUser(@PathVariable int id){
-        return userService.Sel(id).toString();
+    @RequestMapping("getUser/{userId}")
+    public String GetUser(@PathVariable("userId") String userId){
+        return userService.query(userId).toString();
     }
 
 }

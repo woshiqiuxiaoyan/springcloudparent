@@ -12,12 +12,15 @@ import org.springframework.stereotype.Service;
  * @Date: 2018/11/28 10:08
  * @Version:
  */
-@Service("userService")
+@Service ("userService")
 public class UserService {
+
     @Autowired
     UserMapper userMapper;
-    public User Sel(int id){
-        return userMapper.Sel(id);
+
+    public User query(String userId) {
+        User user = userMapper.query(userId);
+        return user;
     }
 
 }
