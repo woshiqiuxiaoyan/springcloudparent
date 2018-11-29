@@ -1,6 +1,8 @@
 package com.yan.springcloudredis.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 /**
@@ -11,6 +13,8 @@ import lombok.ToString;
  * @Version:
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @ToString
 public class User {
     private String userId;
