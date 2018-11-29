@@ -34,6 +34,7 @@
         <module>springcloudprovide</module>
         <module>springcloudseluthhi</module>
         <module>springcloudseluthmiya</module>
+        <module>springcloudredis</module>
     </modules>
 
     <properties>
