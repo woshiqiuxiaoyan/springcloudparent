@@ -2,6 +2,8 @@ server:
   port: 4444
 
 spring:
+  profiles:
+    include: redis
   datasource:
     username: dfth_dev
     password: dfth_dev
@@ -21,6 +23,7 @@ eureka:
    service-url:
      defaultZone: http://${eureka.instance.hostname}:1111/eureka/
 
+#redis配置
 
 
 #showSql

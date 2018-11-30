@@ -1,4 +1,5 @@
-server.port=1117
+server:
+ port: 1117
 
 spring:
 #redis
