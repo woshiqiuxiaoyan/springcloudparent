@@ -2,6 +2,8 @@ server:
   port: 4444
 
 spring:
+  application:
+    name: springcloudprovide
   profiles:
     active: dev
 mybatis:
