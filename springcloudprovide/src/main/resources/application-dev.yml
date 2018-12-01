@@ -1,0 +1,23 @@
+server:
+  port: 4444
+
+spring:
+  profiles:
+    include: redis_dev
+    active: pro
+  datasource:
+    username: dfth_dev
+    password: dfth_dev
+    url: jdbc:mysql://sh-cdb-fc46vtb8.sql.tencentcdb.com:62642/springclouddev?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+#注册到服务中心
+eureka:
+  instance:
+    hostname: 118.25.54.103
+  client:
+   service-url:
+     defaultZone: http://${eureka.instance.hostname}:1111/eureka/
+

@@ -1,0 +1,21 @@
+server:
+  port: 4444
+
+spring:
+  profiles:
+    include: redis_pro
+  datasource:
+    username: dfth_dev
+    password: dfth_dev
+    url: jdbc:mysql://172.17.16.7:3306/springclouddev?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+#注册到服务中心
+eureka:
+  instance:
+    hostname: 172.17.0.10
+  client:
+   service-url:
+     defaultZone: http://${eureka.instance.hostname}:1111/eureka/
