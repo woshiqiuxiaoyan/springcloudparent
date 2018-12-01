@@ -27,4 +27,7 @@ public class RedisConstants {
     public static final String DEFAULT_NAME_SPACE="COMYAN";
 
 
+    public interface Lua {
+      String TESTLUA="TEST_LUA_CODE";
+    }
 }

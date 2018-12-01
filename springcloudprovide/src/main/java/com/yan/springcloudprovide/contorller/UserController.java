@@ -1,9 +1,12 @@
 package com.yan.springcloudprovide.contorller;
 
 import com.yan.common.constants.RedisConstants;
+import com.yan.springcloudprovide.redis.ILuaScriptService;
 import com.yan.springcloudprovide.redis.IRedisClient;
 import com.yan.springcloudprovide.service.UserService;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,7 +30,8 @@ public class UserController {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
     private UserService userService;
-
+    @Autowired
+    private ILuaScriptService luaScriptService;
     @Autowired
     private IRedisClient redisClient;
 
@@ -61,15 +65,16 @@ public class UserController {
         return "123";
     }
 
-
-
+    /**
+     * it's work
+     * @return
+     */
     @RequestMapping ("/testRedisLua")
     public String testRedisLua() {
-
-
-
-
-        return "123";
+        List<String> keys = Arrays.asList("qiuxy");
+        List<String> argvs = Arrays.asList("teststring");
+        String result = luaScriptService.eval2string(RedisConstants.Lua.TESTLUA,keys,argvs);
+        return result;
     }
 
 
