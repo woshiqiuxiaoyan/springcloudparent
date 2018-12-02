@@ -1,0 +1,17 @@
+spring:
+   cloud:
+     config:
+       server:
+         native:
+           search-locations: /home/git/responsit/springcloudparent # 配置仓库路径下的相对搜索位置， 可以配置多个
+
+#内网地址
+eureka:
+  instance:
+    hostname: 172.17.0.10
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:1111/eureka/
+
+#测试地址：http://localhost:2222/yan/dev 其中 yan为文件名称前缀 dev 为后缀 文件命名yan-dev.properties
+#测试地址：http://localhost:2222/myconfigclient/dev/proconfig  最后一个为分支名称

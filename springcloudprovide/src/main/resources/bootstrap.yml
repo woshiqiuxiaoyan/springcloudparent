@@ -1,0 +1,28 @@
+server:
+  port: 20810
+spring:
+  application:
+    name: springcloudprovide
+  profiles:
+    active: pro
+    include: datasource #引入配置文件
+  cloud:
+      config:
+        label: master
+        discovery:
+          enabled: true
+          service-id: springcloudconfigserver
+          profile: ${spring.profiles.active}   #配置文件后缀名
+        name: ${spring.application.name},globalconfig
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.yan.springcloudprovide.entity
+
+
+#showSql
+logging:
+  level:
+    com:
+      yan:
+        springcloudprovide:
+          mapper: debug

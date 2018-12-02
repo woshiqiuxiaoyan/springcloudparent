@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    config:
+      label: master
+      username:
+      password:
+      server:
+        git:
+          uri: https://github.com/woshiqiuxiaoyan/springcloudparent
+          searchPaths: /configcontent/dev # 配置仓库路径下的相对搜索位置， 可以配置多个
+
+#这里的label 只是默认的分支而已
+eureka:
+  instance:
+    hostname: 118.25.54.103
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:1111/eureka/
+#测试地址：http://localhost:2222/yan/dev 其中 yan为文件名称前缀 dev 为后缀 文件命名yan-dev.properties
+
+#测试地址：http://localhost:2222/myconfigclient/dev/proconfig  最后一个为分支名称

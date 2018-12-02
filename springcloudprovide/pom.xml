@@ -18,28 +18,31 @@
     </parent>
 
     <dependencies>
-        <!--添加servlet-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
-        </dependency>
 
         <dependency>
             <groupId>com.yan</groupId>
             <artifactId>springcloudcommon</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+
+        <!--配置文件客户端-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <!-- 移除嵌入式tomcat插件 -->
-            <exclusions>
+           <!-- <exclusions>
                 <exclusion>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-tomcat</artifactId>
                 </exclusion>
-            </exclusions>
+            </exclusions>-->
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -107,20 +110,23 @@
             <version>3.8.1</version>
         </dependency>
 
+        <!--改成tomcat-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
-   <!-- <build>
+
+    <build>
+        <finalName>springcloudprovide</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-        </plugins>
-    </build>-->
-
-    <build>
-        <finalName>springcloudprovide</finalName>
-        <plugins>
             <!-- war部署使用 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

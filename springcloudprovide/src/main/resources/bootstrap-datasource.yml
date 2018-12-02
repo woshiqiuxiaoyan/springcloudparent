@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    username: ${mysql.username}
+    password: ${mysql.password}
+    url: ${mysql.url}
+    driver-class-name: ${mysql.driverName}
+    type: ${mysql.type}

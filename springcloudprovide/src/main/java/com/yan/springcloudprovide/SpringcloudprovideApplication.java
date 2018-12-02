@@ -13,7 +13,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableDiscoveryClient
 @MapperScan("com.yan.springcloudprovide.mapper")
 @SpringBootApplication
-@EnableCaching
 public class SpringcloudprovideApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {

@@ -4,8 +4,8 @@
 
     <resultMap id="BaseResultMap" type="com.yan.springcloudprovide.entity.User">
         <result column="user_id"  jdbcType="VARCHAR" property="userId" />
-        <result column="userName" jdbcType="VARCHAR" property="userName" />
-        <result column="passWord" jdbcType="VARCHAR" property="passWord" />
+        <result column="user_name" jdbcType="VARCHAR" property="userName" />
+        <result column="password" jdbcType="VARCHAR" property="passWord" />
         <result column="realName" jdbcType="VARCHAR" property="realName" />
     </resultMap>
 
