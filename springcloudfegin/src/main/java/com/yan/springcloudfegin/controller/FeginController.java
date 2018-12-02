@@ -1,11 +1,15 @@
 package com.yan.springcloudfegin.controller;
 
 import com.yan.common.entity.UserInfo;
+import com.yan.springcloudfegin.service.IProvideService;
 import com.yan.springcloudfegin.service.ITestService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+import sun.rmi.runtime.Log;
 
 /**
  * <p>类名:FeginController </p>
@@ -18,8 +22,13 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class FeginController {
 
+
+    private Logger logger=LoggerFactory.getLogger(this.getClass());
+
     @Autowired
     private ITestService testService;
+    @Autowired
+    private IProvideService provideService;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -32,7 +41,7 @@ public class FeginController {
     }
 
 
-        @RequestMapping ("/comsumer")
+    @RequestMapping ("/comsumer")
     String comsumer() {
         return testService.comsumer();
     }
@@ -57,5 +66,11 @@ public class FeginController {
         return testService.saveUserInfo(userInfo);
     }
 
+
+    @RequestMapping("/testRedisLua")
+    public String testRedisLua(){
+        logger.info("======testRedisLua====");
+        return provideService.testRedisLua();
+    }
 
 }

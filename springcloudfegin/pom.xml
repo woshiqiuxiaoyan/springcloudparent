@@ -5,8 +5,8 @@
 
     <groupId>com.yan</groupId>
     <artifactId>springcloudfegin</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <name>springcloudfegin</name>
     <description>fegin 服务消费</description>
@@ -18,6 +18,18 @@
     </parent>
 
     <dependencies>
+        <dependency>
+            <groupId>com.yan</groupId>
+            <artifactId>springcloudcommon</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!--配置文件客户端-->
+        <!--<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>-->
+
         <!--断路器-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -36,16 +48,11 @@
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
+        <!--改成tomcat-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.yan</groupId>
-            <artifactId>springcloudcommon</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -56,6 +63,14 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!-- war部署使用 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <warName>springcloudprovide</warName><!-- 设置打包后war包的名字 -->
+                </configuration>
             </plugin>
         </plugins>
     </build>

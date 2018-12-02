@@ -3,6 +3,11 @@ eureka:
   instance:
     hostname: 118.25.54.103
   client:
-   service-url:
-     defaultZone: http://${eureka.instance.hostname}:1111/eureka/
+    region: myZone
+    availability-zones:
+      myZone: devZone,proZone
+
+    service-url:
+      devZone: http://${eureka.instance.hostname}:${springcloudeureka.dev.port}/eureka/
+      proZone: http://${eureka.instance.hostname}:${springcloudeureka.pro.port}/eureka/
 

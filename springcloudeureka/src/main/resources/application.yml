@@ -1,8 +1,13 @@
-spring.profiles.active=pro
-#server.port=1111
+spring:
+  application:
+    name: springcloudeureka
+  profiles:
+    active: pro
+
+
 #eureka.instance.hostname=localhost
-#²»Ïò×¢²áÖĞĞÄ×¢²á×Ô¼º
+#ä¸å‘æ³¨å†Œä¸­å¿ƒæ³¨å†Œè‡ªå·±
 #eureka.client.register-with-eureka=false
-#²»È¥¼ìË÷ÆäËü·şÎñ
+#ä¸å»æ£€ç´¢å…¶å®ƒæœåŠ¡
 #eureka.client.fetch-registry=false
 #eureka.client.service-url.defaultZone=http://${eureka.instance.hostname}:${server.port}/eureka/

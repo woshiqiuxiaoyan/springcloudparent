@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: springcloudfegin
+server:
+  port: 20811
+
+feign:
+  hystrix:
+    enabled: true

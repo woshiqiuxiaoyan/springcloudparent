@@ -33,6 +33,7 @@
 
 
 	<build>
+		<finalName>springcloudeureka</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
