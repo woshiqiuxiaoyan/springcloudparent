@@ -8,6 +8,6 @@ eureka:
       myZone: devZone,proZone
 
     service-url:
-      devZone: http://${eureka.instance.hostname}:${springcloudeureka.dev.port}/eureka/
-      proZone: http://${eureka.instance.hostname}:${springcloudeureka.pro.port}/eureka/
+      devZone: http://${eureka.instance.hostname}:20812/eureka/
+      proZone: http://${eureka.instance.hostname}:20813/eureka/
 
