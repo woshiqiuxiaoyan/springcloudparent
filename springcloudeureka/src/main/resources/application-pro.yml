@@ -13,5 +13,6 @@ eureka:
     lease-renewal-interval-in-seconds: 30 #参数用于定义服务续约任务的调用间隔时间
     lease-expiration-duration-in-seconds: 90 #参数用于定义服务失效的时间，默认为90秒。
     metadata-map:
-          yan: yan
+      yan: yan
+    instance-id: ${eureka.instance.hostname}:${server.port}
 

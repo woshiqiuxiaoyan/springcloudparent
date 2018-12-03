@@ -33,7 +33,7 @@ public class FeginController {
     @Autowired
     private RestTemplate restTemplate;
 
-    private String urlPreix="http://hello-service";
+    private String urlPreix="http://springcloudhelloservice";
 
     @RequestMapping ("/comsumer1")
     String comsumer1() {
@@ -71,6 +71,13 @@ public class FeginController {
     public String testRedisLua(){
         logger.info("======testRedisLua====");
         return provideService.testRedisLua();
+    }
+
+
+    @RequestMapping("/testxsy")
+    public String testxsy(){
+        Object obj =  restTemplate.getForObject("http://microservice-provider-user/" +1,Object.class);
+        return obj.toString();
     }
 
 }

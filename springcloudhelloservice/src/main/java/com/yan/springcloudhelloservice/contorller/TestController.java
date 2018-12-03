@@ -20,13 +20,12 @@ import org.springframework.web.bind.annotation.RestController;
  * 创建时间: 16:39
  */
 @RestController
-public class TestController implements ITestService {
+public class TestController  {
 
     @Autowired
     private DiscoveryClient discoveryClient;
 
     @RequestMapping("/comsumer")
-    @Override
     public String  comsumer(){
         List<String> serviceIds =  discoveryClient.getServices();
         serviceIds. forEach((e)->{
@@ -39,14 +38,12 @@ public class TestController implements ITestService {
 
 
     @RequestMapping("/hello")
-    @Override
     public String  hello(@RequestParam String name){
         System.err.println("hello:"+name);
         return "hello:"+name;
     }
 
     @RequestMapping("/getUserInfo")
-    @Override
     public UserInfo  getUserInfo(){
       /*  UserInfo userInfo=new UserInfo();
         userInfo.setAge(123);

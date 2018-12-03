@@ -3,6 +3,6 @@ spring:
    application:
      name: springcloudconfigserver
    profiles:
-     active: native,pro
+     active: dev #native,pro
 server:
   port: 20809

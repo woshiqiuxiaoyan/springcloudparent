@@ -8,10 +8,14 @@ spring:
 #内网地址
 eureka:
   instance:
-    hostname: 172.17.0.10
+    hostname: 118.25.54.103
   client:
+    region: myZone
+    availability-zones:
+      myZone: devZone,proZone
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:1111/eureka/
+          devZone: http://${eureka.instance.hostname}:20812/eureka/
+          proZone: http://${eureka.instance.hostname}:20813/eureka/
 
 #测试地址：http://localhost:2222/yan/dev 其中 yan为文件名称前缀 dev 为后缀 文件命名yan-dev.properties
 #测试地址：http://localhost:2222/myconfigclient/dev/proconfig  最后一个为分支名称
