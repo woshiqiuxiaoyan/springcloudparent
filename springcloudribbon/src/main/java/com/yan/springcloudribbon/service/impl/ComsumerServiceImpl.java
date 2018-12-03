@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class ComsumerServiceImpl implements IComsumerServicce {
 
-    private String urlPreix="http://hello-service";
+    private String urlPreix="http://springcloudprovide";
 
     @Autowired
     private RestTemplate restTemplate;
@@ -29,7 +29,7 @@ public class ComsumerServiceImpl implements IComsumerServicce {
     @Override
     @HystrixCommand (fallbackMethod = "hiError")
     public String helloComsumerService() {
-        return restTemplate.getForEntity(urlPreix+"/comsumer",String.class).getBody();
+        return restTemplate.getForEntity(urlPreix+"/testBoot/getUser/1",String.class).getBody();
     }
 
     public String  hiError(){

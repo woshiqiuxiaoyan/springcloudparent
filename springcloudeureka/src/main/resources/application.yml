@@ -2,7 +2,7 @@ spring:
   application:
     name: springcloudeureka
   profiles:
-    active: pro
+    active: dev
 
 
 #eureka.instance.hostname=localhost
