@@ -1,7 +1,11 @@
-#注册到服务中心
+#eureka
 eureka:
   instance:
     hostname: 118.25.54.103
   client:
-   service-url:
-     defaultZone: http://${eureka.instance.hostname}:1111/eureka/
+    service-url:
+      devZone: http://${eureka.instance.hostname}:20812/eureka/
+      proZone: http://${eureka.instance.hostname}:20813/eureka/
+    region: myZone
+    availability-zones:
+      myZone: devZone,proZone
