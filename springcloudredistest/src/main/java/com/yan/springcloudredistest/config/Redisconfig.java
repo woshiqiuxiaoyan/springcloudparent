@@ -1,4 +1,4 @@
-package com.yan.springcloudredis.config;
+package com.yan.springcloudredistest.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
@@ -19,15 +19,15 @@ import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import java.time.Duration;
 
 /**
- * @ClassName RedisConfig
+ * @ClassName Redisconfig
  * @Author: ChenBJ
- * @Description: TODO
- * @Date: 2018/11/28 16:07
+ * @Description: 管理器
+ * @Date: 2018/11/30 10:19
  * @Version:
  */
 @Configuration
 @EnableCaching
-public class RedisConfig extends CachingConfigurerSupport {
+public class Redisconfig  {
     //缓存管理器
     @Bean
     public CacheManager cacheManager(RedisConnectionFactory factory) {

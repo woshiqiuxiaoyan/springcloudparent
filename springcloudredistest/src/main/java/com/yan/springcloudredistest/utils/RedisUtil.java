@@ -1,4 +1,4 @@
-package com.yan.springcloudredis.utils;
+package com.yan.springcloudredistest.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +9,7 @@ import org.springframework.data.redis.core.SessionCallback;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,10 +19,10 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @ClassName RedisUtil
+ * @ClassName Redis
  * @Author: ChenBJ
- * @Description: Redis工具类
- * @Date: 2018/11/28 16:08
+ * @Description: TODO
+ * @Date: 2018/11/30 10:20
  * @Version:
  */
 @Component
