@@ -6,14 +6,9 @@ import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.stereotype.Component;
 
-/** * 
-author  zhongjie
-date 创建时间：2017年10月20日 下午4:06:18
-version 1.0
-parameter 
-since 
-return  
-*/
+/**
+ * spring bean 的取值
+ */
 @Component
 public class SpringContextUtil implements BeanFactoryPostProcessor {
 

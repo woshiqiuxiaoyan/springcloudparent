@@ -1,12 +1,8 @@
 package com.yan.springcloudservice.redis.exception;
-/** * 
-author  zhongjie
-date 创建时间：2017年9月7日 上午10:54:58
-version 1.0
-parameter 
-since
-return 
-*/
+
+/**
+ * redis客户端异常
+ */
 public class RedisClientException extends RuntimeException {
 
     /**
