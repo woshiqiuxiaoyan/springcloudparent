@@ -1,7 +1,6 @@
 package com.yan.springcloudhelloservice.contorller;
 
 import com.yan.common.entity.UserInfo;
-import com.yan.springcloudapi.service.ITestService;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;

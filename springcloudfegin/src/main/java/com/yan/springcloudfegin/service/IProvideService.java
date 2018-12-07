@@ -20,7 +20,7 @@ public interface IProvideService {
      * it's work
      * @return
      */
-    @RequestMapping("/testRedisLua")
+    @RequestMapping("/testBoot/testRedisLua")
     String testRedisLua() ;
 
 

@@ -80,4 +80,12 @@ public class FeginController {
         return obj.toString();
     }
 
+
+    @RequestMapping("/index")
+    public String index(){
+        String obj =  restTemplate.getForObject("http://springcloudprovide/index",String.class);
+        return obj;
+    }
+
+
 }
