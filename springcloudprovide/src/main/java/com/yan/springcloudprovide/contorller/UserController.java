@@ -1,9 +1,9 @@
 package com.yan.springcloudprovide.contorller;
 
 import com.yan.common.constants.RedisConstants;
-import com.yan.springcloudprovide.redis.ILuaScriptService;
-import com.yan.springcloudprovide.redis.IRedisClient;
 import com.yan.springcloudprovide.service.UserService;
+import com.yan.springcloudservice.redis.ILuaScriptService;
+import com.yan.springcloudservice.redis.IRedisClient;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;

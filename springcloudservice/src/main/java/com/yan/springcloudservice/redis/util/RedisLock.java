@@ -1,8 +1,8 @@
-package com.yan.springcloudprovide.redis.util;
+package com.yan.springcloudservice.redis.util;
 
-import com.yan.springcloudprovide.redis.ILock;
-import com.yan.springcloudprovide.redis.IRedisClient;
-import com.yan.springcloudprovide.springutil.SpringContextUtil;
+import com.yan.springcloudservice.redis.ILock;
+import com.yan.springcloudservice.redis.IRedisClient;
+import com.yan.springcloudservice.springutil.SpringContextUtil;
 import lombok.Data;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

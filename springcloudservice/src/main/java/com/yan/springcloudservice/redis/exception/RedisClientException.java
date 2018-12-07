@@ -1,4 +1,4 @@
-package com.yan.springcloudprovide.redis.exception;
+package com.yan.springcloudservice.redis.exception;
 /** * 
 author  zhongjie
 date 创建时间：2017年9月7日 上午10:54:58

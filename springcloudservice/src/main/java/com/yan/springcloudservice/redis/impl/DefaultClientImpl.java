@@ -1,4 +1,4 @@
-package com.yan.springcloudprovide.redis.impl;
+package com.yan.springcloudservice.redis.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;

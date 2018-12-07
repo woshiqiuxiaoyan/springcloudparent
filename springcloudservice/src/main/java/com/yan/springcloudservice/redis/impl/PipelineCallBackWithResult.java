@@ -1,4 +1,4 @@
-package com.yan.springcloudprovide.redis.impl;
+package com.yan.springcloudservice.redis.impl;
 
 import java.util.Map;
 import redis.clients.jedis.Pipeline;

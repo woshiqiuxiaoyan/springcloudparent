@@ -1,4 +1,4 @@
-package com.yan.springcloudprovide.redis.util;
+package com.yan.springcloudservice.redis.util;
 
 public class LockCantObtainException extends RuntimeException {
     private static final long serialVersionUID = 1L;

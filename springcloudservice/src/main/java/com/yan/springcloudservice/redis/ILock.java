@@ -1,9 +1,9 @@
-package com.yan.springcloudprovide.redis;
+package com.yan.springcloudservice.redis;
 
-import com.yan.springcloudprovide.redis.util.LockCallback;
-import com.yan.springcloudprovide.redis.util.LockCantObtainException;
-import com.yan.springcloudprovide.redis.util.LockInsideExecutedException;
-import com.yan.springcloudprovide.redis.util.LockRetryFrequency;
+import com.yan.springcloudservice.redis.util.LockCallback;
+import com.yan.springcloudservice.redis.util.LockCantObtainException;
+import com.yan.springcloudservice.redis.util.LockInsideExecutedException;
+import com.yan.springcloudservice.redis.util.LockRetryFrequency;
 
 /**
  * <p>类名:ILock </p>

@@ -1,4 +1,4 @@
-package com.yan.springcloudprovide.redis.util;
+package com.yan.springcloudservice.redis.util;
 
 public interface LockCallback<T> {
     T handleObtainLock();

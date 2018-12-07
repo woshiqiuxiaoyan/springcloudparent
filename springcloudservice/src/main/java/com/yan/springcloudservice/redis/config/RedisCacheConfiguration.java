@@ -1,4 +1,4 @@
-package com.yan.springcloudprovide.redis.config;
+package com.yan.springcloudservice.redis.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

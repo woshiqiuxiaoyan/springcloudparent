@@ -1,4 +1,4 @@
-package com.yan.springcloudprovide.redis.util;
+package com.yan.springcloudservice.redis.util;
 
 public enum LockRetryFrequency {
     VERY_QUICK(10),

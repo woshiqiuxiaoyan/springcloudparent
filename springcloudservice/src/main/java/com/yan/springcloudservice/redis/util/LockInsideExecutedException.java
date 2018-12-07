@@ -1,4 +1,4 @@
-package com.yan.springcloudprovide.redis.util;
+package com.yan.springcloudservice.redis.util;
 
 public class LockInsideExecutedException extends RuntimeException {
     private static final long serialVersionUID = 2331579241110939344L;

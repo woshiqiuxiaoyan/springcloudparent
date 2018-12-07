@@ -1,12 +1,12 @@
-package com.yan.springcloudprovide.redis.impl;
+package com.yan.springcloudservice.redis.impl;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.yan.common.constants.CommonErrorCodeEnum;
 import com.yan.common.constants.RedisConstants;
 import com.yan.common.exception.BizException;
-import com.yan.springcloudprovide.redis.ILuaScriptService;
-import com.yan.springcloudprovide.redis.IRedisClient;
+import com.yan.springcloudservice.redis.ILuaScriptService;
+import com.yan.springcloudservice.redis.IRedisClient;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;

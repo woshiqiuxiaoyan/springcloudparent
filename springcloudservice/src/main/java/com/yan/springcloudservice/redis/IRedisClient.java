@@ -1,9 +1,9 @@
-package com.yan.springcloudprovide.redis;
+package com.yan.springcloudservice.redis;
 
 import com.alibaba.fastjson.TypeReference;
-import com.yan.springcloudprovide.redis.impl.GetDataCallBack;
-import com.yan.springcloudprovide.redis.impl.PipelineCallBackWithResult;
-import com.yan.springcloudprovide.redis.impl.PipelineCallBackWithoutResult;
+import com.yan.springcloudservice.redis.impl.GetDataCallBack;
+import com.yan.springcloudservice.redis.impl.PipelineCallBackWithResult;
+import com.yan.springcloudservice.redis.impl.PipelineCallBackWithoutResult;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;

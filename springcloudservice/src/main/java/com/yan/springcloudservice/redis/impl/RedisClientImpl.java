@@ -1,7 +1,7 @@
-package com.yan.springcloudprovide.redis.impl;
+package com.yan.springcloudservice.redis.impl;
 
 import com.alibaba.fastjson.TypeReference;
-import com.yan.springcloudprovide.redis.IRedisClient;
+import com.yan.springcloudservice.redis.IRedisClient;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;

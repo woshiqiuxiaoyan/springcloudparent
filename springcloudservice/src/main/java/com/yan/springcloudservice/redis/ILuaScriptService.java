@@ -1,4 +1,4 @@
-package com.yan.springcloudprovide.redis;
+package com.yan.springcloudservice.redis;
 
 import java.util.List;
 import java.util.Map;
