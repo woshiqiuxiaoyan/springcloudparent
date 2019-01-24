@@ -83,6 +83,23 @@
             <artifactId>spring-boot-starter-jta-atomikos</artifactId>
         </dependency>-->
 
+
+
+        <!--start  elasticsearch   start-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+            <version>2.1.2.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.searchbox</groupId>
+            <artifactId>jest</artifactId>
+            <version>6.3.1</version>
+        </dependency>
+        <!--end     elasticsearch    end-->
+
+
         <!--改成tomcat-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -10,3 +10,7 @@ eureka:
     region: myZone
     availability-zones:
       myZone: devZone,proZone
+
+com:
+ random:
+   value: ${random.value}

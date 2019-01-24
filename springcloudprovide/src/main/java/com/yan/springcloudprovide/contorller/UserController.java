@@ -1,6 +1,7 @@
 package com.yan.springcloudprovide.contorller;
 
 import com.yan.common.constants.RedisConstants;
+import com.yan.springcloudprovide.service.IProductService;
 import com.yan.springcloudprovide.service.UserService;
 import com.yan.springcloudservice.redis.ILuaScriptService;
 import com.yan.springcloudservice.redis.IRedisClient;
@@ -14,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import redis.clients.jedis.Response;
 
@@ -36,6 +38,8 @@ public class UserController {
     private ILuaScriptService luaScriptService;
     @Autowired
     private IRedisClient redisClient;
+    @Autowired
+    private IProductService productService;
 
     @RequestMapping ("getUser/{userId}")
     public String GetUser(@PathVariable ("userId") String userId) {
@@ -77,6 +81,19 @@ public class UserController {
         List<String> argvs = Arrays.asList("teststring");
         String result = luaScriptService.eval2string(RedisConstants.Lua.TESTLUA,keys,argvs);
         return result;
+    }
+
+
+
+    /**
+     * test es
+     * @return
+     */
+    @RequestMapping ("/testElsearch")
+    @ResponseBody
+    public String testElsearch() {
+         productService.search("yandaye2");
+        return "SUCCESS";
     }
 
 

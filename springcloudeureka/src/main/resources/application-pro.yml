@@ -14,5 +14,5 @@ eureka:
     lease-expiration-duration-in-seconds: 90 #参数用于定义服务失效的时间，默认为90秒。
     metadata-map:
       yan: yan
-    instance-id: ${eureka.instance.hostname}:${server.port}
+    #instance-id: ${eureka.instance.hostname}:${server.port}
 
