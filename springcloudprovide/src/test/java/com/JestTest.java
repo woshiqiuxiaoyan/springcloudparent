@@ -4,31 +4,27 @@ import io.searchbox.client.JestClient;
 import io.searchbox.client.JestClientFactory;
 import io.searchbox.client.JestResult;
 import io.searchbox.client.config.HttpClientConfig;
-import io.searchbox.core.Bulk;
-import io.searchbox.core.BulkResult;
-import io.searchbox.core.Index;
 import io.searchbox.core.Search;
 import io.searchbox.indices.CreateIndex;
 import io.searchbox.indices.mapping.GetMapping;
 import io.searchbox.indices.mapping.PutMapping;
-import java.util.List;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 
 public class JestTest {
     private static JestClient jestClient;
-    private static String indexName = "userindex";
+    private static String indexName = "ecommerce";
     //      private static String indexName = "userindex2";
-    private static String typeName = "user";
-    private static String elasticIps = "http://192.169.2.98:9200";
+    private static String typeName = "product";
+    private static String elasticIps = "http://169.254.1.46:9200";
     //      private static String elasticIps="http://127.0.0.1:9200";
 
 
     public static void main(String[] args) throws Exception {
         jestClient = getJestClient();
         serach1();
-        serach2();
-        serach3();
+       /* serach2();
+        serach3();*/
         jestClient.close();
 
     }
@@ -58,7 +54,7 @@ public class JestTest {
      * 全文搜索
      */
     public static void serach1() {
-        String query = "工程师";
+        String query = "qiuxy";
         try {
             SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
             searchSourceBuilder.query(QueryBuilders.queryStringQuery(query));
