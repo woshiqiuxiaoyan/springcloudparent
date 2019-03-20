@@ -3,18 +3,18 @@ server:
 
 eureka:
   server:
-      enable-self-preservation: false
+      enable-self-preservation: false # 设为false，关闭自我保护
   client:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:20813/eureka/
   instance:
     preferIpAddress: true
-    hostname: 118.25.54.103
+    hostname:  127.0.0.1  #118.25.54.103
     lease-renewal-interval-in-seconds: 30 #参数用于定义服务续约任务的调用间隔时间
     lease-expiration-duration-in-seconds: 90 #参数用于定义服务失效的时间，默认为90秒。
     metadata-map:
       yan: yan
-   # instance-id: ${eureka.instance.hostname}:${server.port}
+    instance-id: qxy:${server.port}
 
 
 

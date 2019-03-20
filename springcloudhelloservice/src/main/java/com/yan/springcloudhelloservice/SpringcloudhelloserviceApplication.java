@@ -14,7 +14,6 @@ public class SpringcloudhelloserviceApplication extends SpringBootServletInitial
 		SpringApplication.run(SpringcloudhelloserviceApplication.class, args);
 	}
 
-
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
 		return builder.sources(SpringcloudhelloserviceApplication.class);

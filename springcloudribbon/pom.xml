@@ -46,6 +46,7 @@
 
 
 	<build>
+		<finalName>springcloudribbon</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

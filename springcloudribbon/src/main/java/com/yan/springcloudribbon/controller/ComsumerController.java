@@ -39,9 +39,6 @@ public class ComsumerController {
 
 
 
-
-
-
     @RequestMapping ("hello")
     public String helloYan() {
         for (int i = 10; i > 0; i--) {

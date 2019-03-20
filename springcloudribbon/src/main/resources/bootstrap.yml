@@ -1,0 +1,16 @@
+server:
+  port: 4444
+spring:
+  application:
+    name: ribbon
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    instance-id: ${eureka.instance.hostname}:${server.port}
+  client:
+    region: myZone
+    availability-zones:
+       myZone: yanZone
+    service-url:
+      yanZone: http://${eureka.instance.hostname}:20813/eureka/
+

@@ -1,0 +1,15 @@
+server:
+  port: 20813
+
+eureka:
+  server:
+      enable-self-preservation: false # 设为false，关闭自我保护
+  client:
+    register-with-eureka: false # 不向注册中心注册自己
+    fetch-registry: false # 不去检索服务
+    instance:
+      hostname: 127.0.0.1
+    service-url:
+      defaultZone: http://${eureka.client.instance.hostname}:20813/eureka/
+
+#Connect to localhost:8761 timed out
